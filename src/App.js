@@ -1,4 +1,4 @@
-import Header from './components/Header.jsx';
+import Header from './components/UI/header/Header.jsx';
 import './styles/App.css';
 
 
