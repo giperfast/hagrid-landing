@@ -9,10 +9,12 @@ function Header() {
                 <img src={logo} alt="logo"/>
             </div>
             <ul className="buttons">
-                <li>Integrations</li>
-                <li>Pricing</li>
-                <li>Log In</li>
-                <li>Try for Free</li>
+                <li className="button">
+                    <a href="#">Integrations</a>
+                </li>
+                <li className="button"><a href="#">Pricing</a></li>
+                <li className="button"><a href="#">Log In</a></li>
+                <li className="button highlight"><a href="#">Try for Free</a></li>
             </ul>
       </header>
     );
