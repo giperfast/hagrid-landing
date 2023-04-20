@@ -1,8 +1,6 @@
 import React from 'react';
 import classes from './Header.module.css';
-import logo from '../../../images/logo.svg';
-
-console.log(process.env.PUBLIC_URL)
+import logo from '../../../assets/images/logo.svg';
 
 function Header() {
     return (
