@@ -13,8 +13,8 @@ function App() {
     	<div className="App">
 			<Header/>
 			<TextureSection main title="Social Q&A for any website" description="No-code widget, to get visitors talking">
-				<Scribble image={scribble3} top="192px" left="-32px"/>
-				<Scribble image={scribble2} top="192px" right="-48px"/>
+				<Scribble image={scribble3} top="112px" left="-32px"/>
+				<Scribble image={scribble2} top="112px" right="-48px"/>
 				<Button href="#" size="large">Try for Free</Button>
 				<p className="explain">14 day trial. No credit card needed.</p>
 			</TextureSection>

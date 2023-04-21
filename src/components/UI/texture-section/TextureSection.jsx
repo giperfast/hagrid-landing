@@ -1,11 +1,12 @@
 import React from 'react';
+import classNames from "classnames";
 import classes from './TextureSection.module.css';
 
 function Title({main, title})
 {
     if (main === true) {
         return (
-            <h1 className={classes.title + ' ' + classes.title__main}>{title}</h1>
+            <h1 className={classNames(classes.title, classes.title__main)}>{title}</h1>
         )
     } else {
         return (
@@ -18,7 +19,7 @@ function Description({main, description})
 {
     if (main === true) {
         return (
-            <h3 className={classes.description + ' ' + classes.description__main}>{description}</h3>
+            <h3 className={classNames(classes.description, classes.description__main)}>{description}</h3>
         )
     } else {
         return (

@@ -1,11 +1,13 @@
 .section
 {
+    position: relative;
     background-image: url('../../../assets/images/background-texture.png');
     padding: 128px 24px 128px 24px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .title
