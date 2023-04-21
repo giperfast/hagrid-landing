@@ -4,3 +4,11 @@ body
 {
     font-family: 'Be Vietnam Pro', sans-serif;
 }
+
+.explain
+{
+    color: rgba(63, 63, 70, 1);
+    margin: 16px 0px 32px 0px;
+    font-family: system-ui;
+    line-height: 24px;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Header.module.css';
 import logo from '../../../assets/images/logo.svg';
+import Button from '../button/Button.jsx';
 
 function Header() {
     return (
@@ -18,8 +19,10 @@ function Header() {
                 <li className={classes.button}>
                     <a href="#">Log In</a>
                 </li>
-                <li className={classes.button + ' ' + classes.highlight}>
-                    <a href="#">Try for Free</a>
+                <li>
+                    <Button href="#" size="medium">
+                        Try for Free
+                    </Button>
                 </li>
             </ul>
         </header>
