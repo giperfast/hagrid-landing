@@ -26,7 +26,8 @@ function Card({icon, title, description}) {
 
 function AdvantageCards() {
 
-    const data = [{
+    const data = [
+    {
         'icon': authentication,
         'title': 'Authenticated users',
         'description': 'Socially authenticated posts. So no SPAM. Spend time on meaningful questions from high-intent visitors.',
