@@ -28,12 +28,13 @@ function Description({main, description})
     }
 }
 
-function TextureSection({children, title, description, color = '#fdefef', main}) {
+function TextureSection({children, title, description, color = '#ffffff', main = false}) {
+    const classPadding = main === true ? classes.paddingSmall : ''
     return (
-        <section style={{backgroundColor: color}} className={classes.section}>
+        <section style={{backgroundColor: color}} className={classNames(classes.section, classPadding)}>
 
-            <Title main title={title}/>
-            <Description main description={description}/>
+            <Title main={main} title={title}/>
+            <Description main={main} description={description}/>
             
             {children}
         </section>

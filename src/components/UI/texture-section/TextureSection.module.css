@@ -13,16 +13,19 @@
 .title
 {
     text-align: center;
+    font-size: 48px;
     line-height: 1;
     margin: 0;
+    font-weight: 800;
 }
 
 .description
 {
     text-align: center;
+    font-size: 24px;
+    line-height: 32px;
     font-weight: 300;
-    margin-top: 24px;
-    margin-bottom: 48px;
+    margin: 24px 0px 48px 0px;
     font-family: system-ui;
     color: rgba(39, 39, 42, 1);
 }
@@ -38,4 +41,9 @@
 {
     font-size: 30px;
     line-height: 36px;
+}
+
+.paddingSmall
+{
+    padding: 128px 24px 78px 24px;
 }

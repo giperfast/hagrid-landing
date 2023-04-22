@@ -2,5 +2,25 @@
 .scribble
 {
     position: absolute;
+}
+
+.scribble2
+{
     width: 240px;
+    top: 112px;
+    right: -48px;
+}
+
+.scribble3
+{
+    width: 240px;
+    top: 112px;
+    left: -32px;
+}
+
+.scribble8
+{
+    width: 128px;
+    top: 0px;
+    right: -48px;
 }
