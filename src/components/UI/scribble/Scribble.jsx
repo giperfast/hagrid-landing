@@ -5,6 +5,7 @@ import classes from './Scribble.module.css';
 import scribble2 from '../../../assets/images/scribbles/scribble-2.svg';
 import scribble3 from '../../../assets/images/scribbles/scribble-3.svg';
 import scribble8 from '../../../assets/images/scribbles/scribble-8.svg';
+import scribble9 from '../../../assets/images/scribbles/scribble-9.svg';
 
 function Scribble({scribble}) {
     switch (scribble) {
@@ -21,6 +22,11 @@ function Scribble({scribble}) {
         case '8':
             return (
                 <img src={scribble8} className={classNames(classes.scribble, classes.scribble8)} alt="scribble 8" loading="lazy"></img>
+            );
+            break;
+        case '9':
+            return (
+                <img src={scribble9} className={classNames(classes.scribble, classes.scribble9)} alt="scribble 9" loading="lazy"></img>
             );
             break;
 

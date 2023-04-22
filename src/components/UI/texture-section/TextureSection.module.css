@@ -2,12 +2,13 @@
 {
     position: relative;
     background-image: url('../../../assets/images/background-texture.png');
-    padding: 128px 24px 128px 24px;
+    padding: 128px 96px 128px 96px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    text-align: center;
 }
 
 .title
