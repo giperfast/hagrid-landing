@@ -1,0 +1,58 @@
+.showcase
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.buttons
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 48rem;
+    margin-bottom: 3rem;
+}
+
+.button
+{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    font-family: system-ui;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 12px 0px 12px 0px;
+    width: 33.333333%;
+    color: rgba(82, 82, 91, 1);
+    border-bottom: 1px solid rgba(228, 228, 231, 1);
+}
+
+.button:hover
+{
+    color: rgba(39, 39, 42, 1);
+    border-color: rgba(161, 161, 170, 1);
+    font-weight: 700;
+}
+
+.active
+{
+    color: rgba(39, 39, 42, 1);
+    font-weight: 700;
+    border-bottom-width: 4px;
+    border-color: rgb(82, 82, 91, 1);
+}
+
+.active:hover
+{
+    border-color: rgb(82, 82, 91, 1);
+}
+
+.video
+{
+    width: 100%;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,.1);
+}

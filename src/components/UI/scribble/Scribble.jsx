@@ -6,22 +6,35 @@ import scribble2 from '../../../assets/images/scribbles/scribble-2.svg';
 import scribble3 from '../../../assets/images/scribbles/scribble-3.svg';
 import scribble8 from '../../../assets/images/scribbles/scribble-8.svg';
 import scribble9 from '../../../assets/images/scribbles/scribble-9.svg';
+import scribble10 from '../../../assets/images/scribbles/scribble-10.svg';
 
-function Scribble({scribble}) {
-    switch (scribble) {
-        case '2':
-            return <img src={scribble2} className={classNames(classes.scribble, classes.scribble2)} alt="" loading="lazy"></img>
-        case '3':
-            return <img src={scribble3} className={classNames(classes.scribble, classes.scribble3)} alt="" loading="lazy"></img>
-        case '8':
-            return <img src={scribble8} className={classNames(classes.scribble, classes.scribble8)} alt="" loading="lazy"></img>
-        case '9':
-            return <img src={scribble9} className={classNames(classes.scribble, classes.scribble9)} alt="" loading="lazy"></img>
+const scribbles = [
+    {'id': 2, 'image': scribble2},
+    {'id': 3, 'image': scribble3},
+    {'id': 8, 'image': scribble8},
+    {'id': 9, 'image': scribble9},
+    {'id': 10, 'image': scribble10},
+]
 
-        default:
-            break;
+function Scribble({scribble_id}) {
+    
+    let id = null
+    let image = null
+
+    scribbles.map((scribble) => {
+        if (scribble['id'] === Number(scribble_id)) {
+            id = scribble['id']
+            image = scribble['image']
+            return true
+        }
+        return false
+    })
+
+    if (image == null) {
+        return console.error('Scribble: ' + scribble_id + ' not found')
     }
 
+    return <img src={image} className={classNames(classes.scribble, classes[ 'scribble' + id ])} alt="" loading="lazy"></img>
 }
 
 export default Scribble;
