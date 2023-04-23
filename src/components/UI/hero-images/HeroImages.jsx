@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from "classnames";
 import classes from './HeroImages.module.css';
 
 import image_1 from '../../../assets/images/hero/hero-img-1.png';
@@ -10,7 +9,7 @@ import image_3 from '../../../assets/images/hero/hero-img-3.png';
 function HeroImage({image}) {
     return (
         <div className={classes.image}>
-            <img src={image}/>
+            <img src={image} alt=""/>
         </div>
     )
 }

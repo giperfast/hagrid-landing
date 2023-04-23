@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from "classnames";
 import classes from './AdvantageCards.module.css';
 
 import authentication from '../../../assets/images/advantage/authentication.svg';
@@ -12,12 +11,10 @@ import rocket from '../../../assets/images/advantage/rocket.svg';
 import globe from '../../../assets/images/advantage/globe.svg';
 import controls from '../../../assets/images/advantage/controls.svg';
 
-console.log(authentication);
-
 function Card({icon, title, description}) {
     return (
         <div className={classes.card}>
-            <img src={icon} className={classes.icon}/>
+            <img src={icon} className={classes.icon} alt={title + ' icon'} loading="lazy"/>
             <p className={classes.title}>{title}</p>
             <p className={classes.description}>{description}</p>
         </div>

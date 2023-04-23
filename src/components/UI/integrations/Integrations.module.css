@@ -1,0 +1,57 @@
+.integrations
+{
+    background-color: rgba(24, 24, 27, 1);
+    padding: 40px 96px 40px 96px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title_group
+{
+    position: relative;
+    color: rgb(255 255 255/1);
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.wavy_lines
+{
+    position: absolute;
+    width: 64px;
+    bottom: -4px;
+}
+
+.left_wavy_line
+{
+    left: -80px;
+}
+
+.right_wavy_line
+{
+    right: -80px;
+}
+
+.buttons
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.buttons > *
+{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo
+{
+    transform: scale(.75);
+}

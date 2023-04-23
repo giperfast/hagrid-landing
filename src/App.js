@@ -4,6 +4,7 @@ import Scribble from './components/UI/scribble/Scribble.jsx';
 import Button from './components/UI/button/Button.jsx';
 import HeroImages from './components/UI/hero-images/HeroImages.jsx';
 import AdvantageCards from './components/UI/advantage-cards/AdvantageCards.jsx';
+import Integrations from './components/UI/integrations/Integrations.jsx';
 import './styles/App.css';
 
 
@@ -24,6 +25,7 @@ function App() {
 				<Scribble scribble="9"/>
 				<AdvantageCards/>
 			</TextureSection>
+			<Integrations/>
     	</div>
   	);
 }
