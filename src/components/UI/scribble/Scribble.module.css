@@ -10,11 +10,25 @@
     right: -48px;
 }
 
+.scribble4
+{
+    width: 160px;
+    top: 48px;
+    right: -48px;
+}
+
+.scribble5
+{
+    width: 160px;
+    top: 50%;
+    left: -64px;
+}
+
 .scribble3
 {
     width: 240px;
     top: 112px;
-    left: -32px;
+    right: -48px;
 }
 
 .scribble8

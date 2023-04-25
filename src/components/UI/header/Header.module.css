@@ -11,10 +11,10 @@
     z-index: 10;
 }
 
-.logo
+.logo img
 {
-    width: 115px;
-    height: 40px;
+    display: block;
+    width: 112px;
 }
 
 .buttons

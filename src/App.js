@@ -6,9 +6,9 @@ import HeroImages from './components/UI/hero-images/HeroImages.jsx';
 import AdvantageCards from './components/UI/advantage-cards/AdvantageCards.jsx';
 import Integrations from './components/UI/integrations/Integrations.jsx';
 import Showcase from './components/UI/showcase/Showcase.jsx';
-import './styles/App.css';
-
-
+import Questions from './components/UI/questions/Questions.jsx';
+import Footer from './components/UI/footer/Footer.jsx';
+import classes from  './styles/App.css';
 
 function App() {
   	return (
@@ -18,7 +18,7 @@ function App() {
 				<Scribble scribble_id="3"/>
 				<Scribble scribble_id="2"/>
 				<Button href="#" size="large">Try for Free</Button>
-				<p className="explain">14 day trial. No credit card needed.</p>
+				<p className={classes.explain}>14 day trial. No credit card needed.</p>
 				<HeroImages/>
 			</TextureSection>
 			<TextureSection title="All of the results - none of the work!" description="In 15 minutes get set for automatic SEO, social proof and meaningful engagement">
@@ -31,6 +31,12 @@ function App() {
 				<Scribble scribble_id="10"/>
 				<Showcase/>
 			</TextureSection>
+			<TextureSection title="See hagrid in action" description="Ask us anything you'd like, we're using hagrid to put this FAQ up" color="#ffdefa66">
+				<Scribble scribble_id="4"/>
+				<Scribble scribble_id="5"/>
+				<Questions/>
+			</TextureSection>
+			<Footer/>
     	</div>
   	);
 }

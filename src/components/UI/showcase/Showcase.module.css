@@ -55,4 +55,17 @@
 {
     width: 100%;
     box-shadow: 0 20px 25px -5px rgba(0,0,0,.1);
+    border-radius: 8px;
+}
+
+.description
+{
+    font-size: 20px;
+    line-height: 28px;
+    color: rgba(63, 63, 70, 1);
+    font-weight: 400;
+    text-align: center;
+    padding: 0px 24px 0px 24px;
+    margin-top: 32px;
+    font-family: system-ui;
 }
