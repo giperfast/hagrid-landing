@@ -6,7 +6,7 @@ function Questions() {
    
     return (
         <div className={classes.container}>
-            <a href="#" className={classes.watermark}>Powered by <span class={classes.bold}>hagrid</span></a>
+            <a href="#" className={classes.watermark}>Powered by <span className={classes.bold}>hagrid</span></a>
 
            <div className={classes.post}>
                 <p className={classes.post_title}>Ask us Anything</p>

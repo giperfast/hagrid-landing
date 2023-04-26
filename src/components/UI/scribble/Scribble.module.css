@@ -3,6 +3,12 @@
     position: absolute;
 }
 
+.scribble1
+{
+    width: 96px;
+    top: 32px;
+}
+
 .scribble2
 {
     width: 240px;
@@ -29,6 +35,20 @@
     width: 240px;
     top: 112px;
     right: -48px;
+}
+
+.scribble6
+{
+    width: 160px;
+    bottom: 0;
+    left: -32px;
+}
+
+.scribble7
+{
+    width: 208px;
+    top: 80px;
+    right: -32px;
 }
 
 .scribble8

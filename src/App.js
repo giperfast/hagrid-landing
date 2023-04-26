@@ -10,6 +10,8 @@ import Questions from './components/UI/questions/Questions.jsx';
 import Footer from './components/UI/footer/Footer.jsx';
 import classes from  './styles/App.css';
 
+import heart_icon from  './assets/images/heart.svg';
+
 function App() {
   	return (
     	<div className="App">
@@ -35,6 +37,13 @@ function App() {
 				<Scribble scribble_id="4"/>
 				<Scribble scribble_id="5"/>
 				<Questions/>
+			</TextureSection>
+			<TextureSection title="What they are saying about hagrid..." description={['People', `<img src=${heart_icon}/>`, 'us']} color="#8384df33">
+				<Scribble scribble_id="7"/>
+				<Scribble scribble_id="6"/>
+			</TextureSection>
+			<TextureSection title="Unlimited everything always" description="One simple plan. No limits. Pay annually and save." color="#facdcd99">
+				<Scribble scribble_id="1"/>
 			</TextureSection>
 			<Footer/>
     	</div>

@@ -25,25 +25,19 @@ function VideoFromIndex({index}) {
 function Showcase() {
     const [index, setIndex] = useState(DEFAULT_INDEX);
 
-    const changeVideo = (event) => {
-        const button = event.target
-        const index = Number(button.attributes.index.value)
-
-        setIndex(index)
-    }
-
     return (
         <div className={classes.showcase}>
             <div className={classes.buttons}>
             {
                 tabs.map((button) => {
                     const is_active = button.id === index ? classes.active : ''
-                    return <button onClick={changeVideo} index={button.id} className={classNames(classes.button, is_active)} key={button.id}>{button.title}</button>
+                    return <button onClick={() => setIndex(button.id)} className={classNames(classes.button, is_active)} key={button.id}>{button.title}</button>
                 })
             }
             </div>
+
             <VideoFromIndex index={index}/>
-            <p className={classes.description}>{tabs[index]['description']}</p>
+            <p className={classes.description}>{tabs[index] == null ? '' : tabs[index]['description']}</p>
         </div>
     );
 }

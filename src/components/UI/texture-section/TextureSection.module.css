@@ -29,6 +29,13 @@
     margin: 24px 0px 48px 0px;
     font-family: system-ui;
     color: rgba(39, 39, 42, 1);
+    display: flex;
+}
+
+.description img
+{
+    width: 28px;
+    margin: 0px 6px;
 }
 
 .title__main
