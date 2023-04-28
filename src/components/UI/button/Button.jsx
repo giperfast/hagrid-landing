@@ -2,12 +2,15 @@ import React from 'react';
 import classNames from "classnames";
 import classes from './Button.module.css';
 
-function Button({children, size, ...attrs}) {
+// size: small, medium, large
+// type: rectangle, rounded
+
+function Button({children, size = 'medium', type = 'rectangle', ...attrs}) {
 
     let Tag = attrs.href ? 'a' : 'button'
 
     return (
-        <Tag {...attrs} className={classNames(classes.button, classes[size])}>
+        <Tag {...attrs} className={classNames(classes.button, classes[type], classes[size])}>
             {children}
         </Tag>
     );

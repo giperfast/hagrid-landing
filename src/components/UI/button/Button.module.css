@@ -1,9 +1,4 @@
-.button:hover
-{
-    transform: translateY(-5px);
-}
-
-.button
+.rectangle.button
 {
     text-decoration: none;
     color: #ffffff;
@@ -12,25 +7,57 @@
     font-weight: 800;
     overflow: hidden;
     transition: transform .3s;
+    cursor: pointer;
 }
 
-.small
+.rectangle.button:hover
+{
+    transform: translateY(-5px);
+}
+
+.rectangle.small
 {
     background: #ffffff;
     box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.3);
 }
 
-.medium
+.rectangle.medium
 {
     padding: 12px 32px 12px 32px;
     box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.3);
     line-height: 24px;
 }
 
-.large
+.rectangle.large
 {
     padding: 24px 48px 24px 48px;
     box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.3);
     font-size: 18px;
     line-height: 28px;
+}
+
+.rounded.button
+{
+    border-radius: 9999px;
+    color: #ffffff;
+    background-color: #000000;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    font-family: Lato;
+    border: 0;
+    cursor: pointer;
+}
+
+.rounded.small
+{
+    padding: 8px 28px 8px 28px;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+}
+
+.rounded.medium
+{
+    padding: 12px 28px 12px 28px;
 }

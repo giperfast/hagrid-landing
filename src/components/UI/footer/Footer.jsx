@@ -1,6 +1,5 @@
 import React from 'react';
 import classes from './Footer.module.css';
-import Button from '../button/Button.jsx';
 
 import logo from '../../../assets/images/logo.svg';
 import badge from '../../../assets/images/top-post-badge.svg';

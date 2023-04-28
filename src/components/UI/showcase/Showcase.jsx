@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classes from './Showcase.module.css';
 import classNames from "classnames";
 
