@@ -58,6 +58,7 @@ function Questions() {
             <Card/>
             <Card/>
             <Card/>
+            <Card/>
 
             <div className={classes.bottom_container}>
                 <Button type="rounded" size="small">Load more questions</Button>
