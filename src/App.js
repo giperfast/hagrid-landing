@@ -7,7 +7,7 @@ import AdvantageCards from './components/UI/advantage-cards/AdvantageCards.jsx';
 import Integrations from './components/UI/integrations/Integrations.jsx';
 import Showcase from './components/UI/showcase/Showcase.jsx';
 import Questions from './components/UI/questions/Questions.jsx';
-import Reviews from './components/UI/reviews/Reviews.jsx';
+import Testimonials from './components/UI/testimonials/Testimonials.jsx';
 import Footer from './components/UI/footer/Footer.jsx';
 import classes from  './styles/App.css';
 
@@ -42,7 +42,7 @@ function App() {
 			<TextureSection title="What they are saying about hagrid..." description={['People', `<img src=${heart_icon}/>`, 'us']} color="#8384df33">
 				<Scribble scribble_id="7"/>
 				<Scribble scribble_id="6"/>
-				<Reviews/>
+				<Testimonials/>
 			</TextureSection>
 			<TextureSection title="Unlimited everything always" description="One simple plan. No limits. Pay annually and save." color="#facdcd99">
 				<Scribble scribble_id="1"/>
