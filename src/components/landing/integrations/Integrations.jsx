@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from "classnames";
 import classes from './Integrations.module.css';
-import Button from '../button/Button.jsx';
+import Button from '../../UI/button/Button.jsx';
 
 import wavy_line from '../../../assets/images/wavy-line.svg';
 import js_mono from '../../../assets/images/integrations/js-mono.svg';

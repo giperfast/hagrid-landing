@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import classes from './Testimonials.module.css';
-import classNames from "classnames";
+import Preloader from '../../UI/preloader/Preloader.jsx';
 
 async function getTestimonials() {
     let resp
@@ -56,6 +56,8 @@ function Testimonials() {
                 'designation': record.fields['Designation'],
                 'link': record.fields['Link'],
             })
+
+            return true
         })
 
         setData(data)
@@ -65,9 +67,9 @@ function Testimonials() {
         testimonials();
     }, []);
 
-    if (data.length == 0)
+    if (data.length === 0)
     {
-        return <div>preloader</div>
+        return <Preloader/>
     }
 
     return (
@@ -75,7 +77,7 @@ function Testimonials() {
         {
             data.map((column, index) => {
                 return (
-                    <ul className={classes.list}>
+                    <ul className={classes.list} key={index}>
                     {
                         column.map((testimonial) => {
                             return (

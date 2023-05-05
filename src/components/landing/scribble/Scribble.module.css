@@ -16,6 +16,13 @@
     right: -48px;
 }
 
+.scribble3
+{
+    width: 240px;
+    top: 112px;
+    left: -48px;
+}
+
 .scribble4
 {
     width: 160px;
@@ -28,13 +35,6 @@
     width: 160px;
     top: 50%;
     left: -64px;
-}
-
-.scribble3
-{
-    width: 240px;
-    top: 112px;
-    right: -48px;
 }
 
 .scribble6

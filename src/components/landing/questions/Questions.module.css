@@ -74,6 +74,16 @@
     position: relative;
     padding: 16px 128px 16px 128px;
     text-align: left;
+    animation: fade-in .3s ease;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .question

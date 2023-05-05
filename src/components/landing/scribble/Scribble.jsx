@@ -31,13 +31,10 @@ function Scribble({scribble_id}) {
     let id = null
     let image = null
 
-    scribbles.map((scribble) => {
-        if (scribble['id'] === Number(scribble_id)) {
-            id = scribble['id']
-            image = scribble['image']
-            return true
-        }
-        return false
+    scribbles.filter(scribble => scribble.id === Number(scribble_id)).map((scribble) => {
+        id = scribble['id']
+        image = scribble['image']
+        return true
     })
 
     if (image == null) {
