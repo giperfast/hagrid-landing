@@ -23,6 +23,12 @@
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 8px;
     margin-bottom: 24px;
+    transition: transform .3s;
+}
+
+.item:hover
+{
+    transform: translateY(-6px);
 }
 
 .text

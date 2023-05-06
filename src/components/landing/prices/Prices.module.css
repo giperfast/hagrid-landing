@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+.container
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: rgba(24, 24, 27, 1);
+    width: 100%;
+}
+
+.card
+{
+    position: relative;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 1);
+    max-width: 512px;
+    width: 100%;
+    padding: 32px;
+    text-align: left;
+}
+
+.title
+{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    font-family: Be Vietnam Pro;
+    margin: 0;
+}
+
+.price
+{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1;
+    font-family: Be Vietnam Pro;
+    margin: 32px 0px 0px 0px;
+}
+
+.duration
+{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.description
+{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Plus Jakarta Sans;
+    margin: 0px 0px 48px 0px;
+}
+
+.button
+{
+    display: flex;
+}
+
+.popular
+{
+    position: absolute;
+    top: -16px;
+    left: 16px;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: Plus Jakarta Sans;
+    padding: 6px 10px 6px 10px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(235, 47, 6, 1);
+    border-radius: 8px;
+    transform: rotate(-16deg);
+}
+
+.popular img
+{
+    position: absolute;
+    left: 128px;
+    top: -4px;
+    width: 32px;
+    height: 30px;
+    transform: rotate(19deg);
+}

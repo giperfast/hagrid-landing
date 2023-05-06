@@ -95,6 +95,7 @@ function Card({question, answer, username, avatar}) {
 
 function Questions() {
     const QUESTION_COUNT = 16
+    
     const [page, setPage] = useState(1)
     const [questions, setQuestions] = useState([])
     const [showButton, setShowButton] = useState(true)

@@ -8,6 +8,7 @@ import Integrations from './components/landing/integrations/Integrations.jsx';
 import Showcase from './components/landing/showcase/Showcase.jsx';
 import Questions from './components/landing/questions/Questions.jsx';
 import Testimonials from './components/landing/testimonials/Testimonials.jsx';
+import Prices from './components/landing/prices/Prices.jsx';
 import Footer from './components/UI/footer/Footer.jsx';
 import classes from  './styles/App.css';
 
@@ -46,6 +47,7 @@ function App() {
 			</TextureSection>
 			<TextureSection title="Unlimited everything always" description="One simple plan. No limits. Pay annually and save." color="#facdcd99">
 				<Scribble scribble_id="1"/>
+				<Prices/>
 			</TextureSection>
 			<Footer/>
     	</div>
