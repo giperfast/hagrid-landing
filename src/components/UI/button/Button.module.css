@@ -1,8 +1,22 @@
+.dark
+{
+    --color: #ffffff;
+    --background-color: #27272a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+.light
+{
+    --color: rgba(24, 24, 27, 1);
+    --background-color: rgba(255, 255, 255, 1);
+    --shadow-color: rgba(255, 255, 255, 0.3);
+}
+
 .rectangle.button
 {
     text-decoration: none;
-    color: #ffffff;
-    background-color: #27272a;
+    color: var(--color);
+    background-color: var(--background-color);
     border-radius: 8px;
     font-weight: 800;
     overflow: hidden;
@@ -18,20 +32,20 @@
 .rectangle.small
 {
     background: #ffffff;
-    box-shadow: 8px 8px 0px 0px rgba(255, 255, 255, 0.3);
+    box-shadow: 8px 8px 0px 0px var(--shadow-color);
 }
 
 .rectangle.medium
 {
     padding: 12px 32px 12px 32px;
-    box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 6px 6px 0px 0px var(--shadow-color);
     line-height: 24px;
 }
 
 .rectangle.large
 {
     padding: 24px 48px 24px 48px;
-    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 8px 8px 0px 0px var(--shadow-color);
     font-size: 18px;
     line-height: 28px;
 }
@@ -39,8 +53,8 @@
 .rounded.button
 {
     border-radius: 9999px;
-    color: #ffffff;
-    background-color: #000000;
+    color: var(--color);
+    background-color: var(--background-color);
     font-size: 14px;
     font-weight: 700;
     line-height: 20px;
@@ -52,8 +66,6 @@
 .rounded.small
 {
     padding: 8px 28px 8px 28px;
-    color: #000000;
-    background-color: #ffffff;
     border: 1px solid #e5e7eb;
 }
 

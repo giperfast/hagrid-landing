@@ -8,7 +8,7 @@
 .image
 {
     transform: scale(.95);
-    box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
     border-radius: 16px;
 }
 
@@ -16,4 +16,22 @@
 {
     width: 414px;
     display: block;
+}
+
+.slider .image
+{
+    display: none;
+}
+
+@media (max-width: 1024px)
+{
+    .image
+    {
+        display: none;
+    }
+
+    .slider .image
+    {
+        display: block;
+    }
 }

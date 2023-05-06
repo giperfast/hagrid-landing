@@ -9,6 +9,7 @@ import Showcase from './components/landing/showcase/Showcase.jsx';
 import Questions from './components/landing/questions/Questions.jsx';
 import Testimonials from './components/landing/testimonials/Testimonials.jsx';
 import Prices from './components/landing/prices/Prices.jsx';
+import AboutOwner from './components/landing/about-owner/AboutOwner.jsx';
 import Footer from './components/UI/footer/Footer.jsx';
 import classes from  './styles/App.css';
 
@@ -49,6 +50,7 @@ function App() {
 				<Scribble scribble_id="1"/>
 				<Prices/>
 			</TextureSection>
+			<AboutOwner/>
 			<Footer/>
     	</div>
   	);

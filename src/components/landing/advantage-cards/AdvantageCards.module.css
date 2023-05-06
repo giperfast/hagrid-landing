@@ -36,3 +36,11 @@
     margin: 8px 0px 0px 0px;
     font-family: system-ui;
 }
+
+@media (max-width: 1024px)
+{
+    .cards
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

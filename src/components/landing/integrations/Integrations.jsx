@@ -21,25 +21,25 @@ function Integrations() {
             <img src={wavy_line} className={classNames(classes.wavy_lines, classes.right_wavy_line)} alt=""/>
         </div>
         <div className={classes.buttons}>
-            <Button href="#" size="small">
+            <Button href="#" size="small" theme="light">
                 <img src={js_mono} className={classes.logo} alt="js_logo"/>
             </Button>
-            <Button href="#" size="small">
+            <Button href="#" size="small" theme="light">
                 <img src={webflow_mono} className={classes.logo} alt="webflow_logo"/>
             </Button>
-            <Button href="#" size="small">
+            <Button href="#" size="small" theme="light">
                 <img src={react_mono} className={classes.logo} alt="react_logo"/>
             </Button>
-            <Button href="#" size="small">
+            <Button href="#" size="small" theme="light">
                 <img src={wp_mono} className={classes.logo} alt="wordpress_logo"/>
             </Button>
-            <Button href="#" size="small">
+            <Button href="#" size="small" theme="light">
                 <img src={wix_mono} className={classes.logo} alt="wix_logo"/>
             </Button>
-            <Button href="#" size="small">
+            <Button href="#" size="small" theme="light">
                 <img src={shopify_mono} className={classes.logo} alt="shopify_logo"/>
             </Button>
-            <Button href="#" size="small">
+            <Button href="#" size="small" theme="light">
                 <img src={carrd_mono} className={classes.logo} alt="carrd_logo"/>
             </Button>
         </div>

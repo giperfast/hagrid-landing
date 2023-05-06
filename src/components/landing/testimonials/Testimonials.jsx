@@ -15,7 +15,7 @@ async function getTestimonials() {
     return resp
 }
 
-function TestimonialCard({text, avatar, name, designation, link}) {
+function Card({text, avatar, name, designation, link}) {
     return (
         <div className={classes.item}>
             <p className={classes.text}>{text}</p>
@@ -49,7 +49,7 @@ function Testimonials() {
             }
 
             data[index].push({
-                'id': record.fields.id,
+                'id': record.id,
                 'quote': record.fields['Quote'],
                 'avatar': record.fields['Attachments'][0].url,
                 'name': record.fields['Name'],
@@ -79,10 +79,10 @@ function Testimonials() {
                 return (
                     <ul className={classes.list} key={index}>
                     {
-                        column.map((testimonial) => {
+                        column.map((testimonial, index) => {
                             return (
                                 <li key={testimonial.id}>
-                                    <TestimonialCard text={testimonial.quote} avatar={testimonial.avatar} name={testimonial.name} designation={testimonial.designation} link={testimonial.link}/>
+                                    <Card text={testimonial.quote} avatar={testimonial.avatar} name={testimonial.name} designation={testimonial.designation} link={testimonial.link}/>
                                 </li>
                             )
                         })

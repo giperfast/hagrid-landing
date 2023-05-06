@@ -73,3 +73,17 @@
     margin: 0;
     margin-top: 4px;
 }
+
+@media (max-width: 1024px)
+{
+    .container
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .list:last-child
+    {
+        display: none;
+    }
+
+}

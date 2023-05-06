@@ -6,6 +6,8 @@ import Checkbox from '../../UI/checkbox/Checkbox.jsx';
 import Button from '../../UI/button/Button.jsx';
 import Preloader from '../../UI/preloader/Preloader.jsx';
 
+const QUESTION_COUNT = 16
+
 async function getQuestions(page) {
     const limit = 6
     const data = [
@@ -94,8 +96,6 @@ function Card({question, answer, username, avatar}) {
 }
 
 function Questions() {
-    const QUESTION_COUNT = 16
-    
     const [page, setPage] = useState(1)
     const [questions, setQuestions] = useState([])
     const [showButton, setShowButton] = useState(true)
@@ -138,7 +138,7 @@ function Questions() {
             </div>
             <div className={classes.title_container}>
                 <p className={classes.sub_title}>All Questions</p>
-                <Button type="rounded" size="small">Login</Button>
+                <Button type="rounded" size="small" theme="light">Login</Button>
             </div>
             {
                 questions.map((question, index) => {
@@ -147,7 +147,7 @@ function Questions() {
             }
             <div className={classes.bottom_container}>
             {
-                showButton ? <Button onClick={() => setPage(page + 1)} type="rounded" size="small">Load more questions</Button> : ''
+                showButton ? <Button onClick={() => setPage(page + 1)} type="rounded" size="small" theme="light">Load more questions</Button> : ''
             }
             {
                 showPreloader ? <Preloader/> : ''
