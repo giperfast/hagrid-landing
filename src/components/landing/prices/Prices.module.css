@@ -86,3 +86,17 @@
     height: 30px;
     transform: rotate(19deg);
 }
+
+@media (max-width: 640px)
+{
+    .container
+    {
+        flex-direction: column;
+    }
+
+    .popular
+    {
+        top: 0px;
+        left: -16px;
+    }
+}

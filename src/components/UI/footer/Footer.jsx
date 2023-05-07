@@ -6,7 +6,13 @@ import badge from '../../../assets/images/top-post-badge.svg';
 
 function Footer() {
     return (
-        <footer className={classes.footer}>
+        <footer className={classes.container}>
+            <div className={classes.logo_wrapper}>
+                <img src={logo} className={classes.logo} alt="logo"/>
+                <a href="https://www.producthunt.com/posts/hagrid?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-hagrid" target="_blank">
+                    <img src={badge} className={classes.badge} alt="top 1 badge"/>
+                </a>
+            </div>
             <div className={classes.columns}>
                 <div className={classes.column}>
                     <img src={logo} className={classes.logo} alt="logo"/>

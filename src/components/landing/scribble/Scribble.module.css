@@ -72,3 +72,113 @@
     left: -32px;
 }
 
+@media (max-width: 1024px)
+{
+    .scribble2
+    {
+        width: 11rem;
+    }
+
+    .scribble3
+    {
+        width: 9rem;
+    }
+
+    .scribble4
+    {
+        width: 8rem;
+    }
+
+    .scribble5
+    {
+        width: 8rem;
+    }
+
+    .scribble6
+    {
+        width: 8rem;
+    }
+
+    .scribble7
+    {
+        width: 10rem;
+    }
+
+    .scribble8
+    {
+        width: 7rem;
+    }
+
+    .scribble9
+    {
+        width: 8rem;
+    }
+
+    .scribble10
+    {
+        width: 6rem;
+    }
+}
+
+@media (max-width: 640px)
+{
+    .scribble2
+    {
+        width: 9rem;
+        top: 7rem;
+        right: -4rem;
+    }
+
+    .scribble3
+    {
+        width: 6rem;
+        top: 0;
+        left: -3rem;
+    }
+
+    .scribble4
+    {
+        width: 5rem;
+        top: 0;
+        right: -2rem;
+    }
+
+    .scribble5
+    {
+        width: 5rem;
+        left: -2rem;
+    }
+
+    .scribble6
+    {
+        width: 5rem;
+        left: -1rem;
+    }
+
+    .scribble7
+    {
+        width: 6rem;
+        top: 0;
+        right: -1rem;
+    }
+
+    .scribble8
+    {
+        width: 5rem;
+        top: 0;
+        right: -3rem;
+    }
+
+    .scribble9
+    {
+        width: 5rem;
+        left: -1.5rem;
+    }
+
+    .scribble10
+    {
+        width: 5rem;
+        top: 0;
+        left: -2rem;
+    }
+}

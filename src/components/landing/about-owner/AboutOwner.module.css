@@ -115,3 +115,11 @@
         justify-content: center;
     }
 }
+
+@media (max-width: 640px)
+{
+    .container
+    {
+        padding: 128px 24px 128px 24px;
+    }
+}

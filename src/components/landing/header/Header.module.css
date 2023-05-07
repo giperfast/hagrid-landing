@@ -11,10 +11,25 @@
     z-index: 10;
 }
 
+.logo
+{
+    display: block;
+}
+
 .logo img
 {
     display: block;
     width: 112px;
+}
+
+.small_logo
+{
+    display: none;
+}
+
+.small_logo img
+{
+    width: 44px;
 }
 
 .buttons
@@ -49,4 +64,35 @@
 {
     background-color: #e5e5e5;
     transform: translateY(-5px);
+}
+
+@media (max-width: 768px)
+{
+    .header
+    {
+        padding: 0px 16px 0px 16px;
+    }
+
+    .button
+    {
+        display: none;
+    }
+
+    .important
+    {
+        display: block;
+    }
+}
+
+@media (max-width: 640px)
+{
+    .logo
+    {
+        display: none;
+    }
+
+    .small_logo
+    {
+        display: block;
+    }
 }

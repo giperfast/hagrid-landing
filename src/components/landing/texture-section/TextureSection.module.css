@@ -55,3 +55,34 @@
 {
     padding: 128px 24px 78px 24px;
 }
+
+@media (max-width: 768px)
+{
+    .section
+    {
+        padding: 128px 16px 128px 16px;
+    }
+}
+
+@media (max-width: 640px)
+{
+    .title
+    {
+        font-size: 30px;
+    }
+
+    .title__main
+    {
+        font-size: 48px;
+    }
+
+    .description
+    {
+        font-size: 20px;
+    }
+
+    .description__main
+    {
+        font-size: 24px;
+    }
+}

@@ -1,4 +1,4 @@
-.footer
+.container
 {
     width: 100%;
     color: rgba(39, 39, 42, 1);
@@ -67,4 +67,40 @@
     line-height: 16px;
     margin: 48px 0px 0px 0px;
     text-align: center;
+}
+
+.logo_wrapper
+{
+    display: none;
+    margin-bottom: 48px;
+}
+
+@media (max-width: 768px)
+{
+    .container
+    {
+        padding: 48px 16px 48px 16px;
+    }
+
+    .columns
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .column:first-child
+    {
+        display: none;
+    }
+
+    .logo_wrapper
+    {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .badge
+    {
+        width: 208px;
+        margin: 0;
+    }
 }

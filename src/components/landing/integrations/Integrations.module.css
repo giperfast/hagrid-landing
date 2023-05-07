@@ -55,3 +55,35 @@
 {
     transform: scale(.75);
 }
+
+@media (max-width: 768px)
+{
+    .integrations
+    {
+        padding: 40px 8px 40px 8px;
+    }
+}
+
+@media (max-width: 640px)
+{
+    .left_wavy_line
+    {
+        display: none;
+    }
+
+    .right_wavy_line
+    {
+        right: 0px;
+    }
+
+    .wavy_lines
+    {
+        bottom: -28px;
+    }
+
+    .title_group
+    {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}

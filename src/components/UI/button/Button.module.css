@@ -73,3 +73,10 @@
 {
     padding: 12px 28px 12px 28px;
 }
+
+@media (max-width: 640px) {
+    .rectangle.large
+    {
+        padding: 16px 32px 16px 32px;
+    }
+}
