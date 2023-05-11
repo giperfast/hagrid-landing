@@ -76,47 +76,47 @@
 {
     .scribble2
     {
-        width: 11rem;
+        width: 176px;
     }
 
     .scribble3
     {
-        width: 9rem;
+        width: 144px;
     }
 
     .scribble4
     {
-        width: 8rem;
+        width: 128px;
     }
 
     .scribble5
     {
-        width: 8rem;
+        width: 128px;
     }
 
     .scribble6
     {
-        width: 8rem;
+        width: 128px;
     }
 
     .scribble7
     {
-        width: 10rem;
+        width: 160px;
     }
 
     .scribble8
     {
-        width: 7rem;
+        width: 112px;
     }
 
     .scribble9
     {
-        width: 8rem;
+        width: 128px;
     }
 
     .scribble10
     {
-        width: 6rem;
+        width: 96px;
     }
 }
 
@@ -124,61 +124,61 @@
 {
     .scribble2
     {
-        width: 9rem;
-        top: 7rem;
-        right: -4rem;
+        width: 144px;
+        top: 112px;
+        right: -64px;
     }
 
     .scribble3
     {
-        width: 6rem;
+        width: 96px;
         top: 0;
-        left: -3rem;
+        left: -48px;
     }
 
     .scribble4
     {
-        width: 5rem;
+        width: 80px;
         top: 0;
-        right: -2rem;
+        right: -32px;
     }
 
     .scribble5
     {
-        width: 5rem;
-        left: -2rem;
+        width: 80px;
+        left: -32px;
     }
 
     .scribble6
     {
-        width: 5rem;
-        left: -1rem;
+        width: 80px;
+        left: -16px;
     }
 
     .scribble7
     {
-        width: 6rem;
+        width: 96px;
         top: 0;
-        right: -1rem;
+        right: -16px;
     }
 
     .scribble8
     {
-        width: 5rem;
+        width: 80px;
         top: 0;
-        right: -3rem;
+        right: -48px;
     }
 
     .scribble9
     {
-        width: 5rem;
-        left: -1.5rem;
+        width: 80px;
+        left: -24px;
     }
 
     .scribble10
     {
-        width: 5rem;
+        width: 80px;
         top: 0;
-        left: -2rem;
+        left: -32px;
     }
 }

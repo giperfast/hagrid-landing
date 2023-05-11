@@ -16,4 +16,4 @@ function Button({children, size = 'medium', type = 'rectangle', theme = 'dark', 
     );
 }
 
-export default Button;
+export default React.memo(Button);

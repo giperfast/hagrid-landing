@@ -15,31 +15,38 @@ function HeroImage({image, ...attrs}) {
     )
 }
 
+const HeroImageMemo = React.memo(HeroImage)
+
 function HeroImages() {
+    let inTimeout = false
     const [currentImage, setCurrentImage] = useState(0)
 
     const slider = () => {
+        inTimeout = true
         setTimeout(() => {
-            if (currentImage === IMAGES.length - 1) {
-                return setCurrentImage((currentImage) => 0)
+            if (currentImage >= IMAGES.length - 1) {
+                return setCurrentImage(0)
             }
-            setCurrentImage((currentImage) => currentImage + 1)
+            setCurrentImage(currentImage + 1)
         }, 3000);
+        inTimeout = false
     }
 
     useEffect(() => {
-        slider();
+        if (inTimeout == false) {
+            slider()
+        }
     }, [currentImage]);
 
     return (
         <div className={classes.images}>
         {
             IMAGES.map((image, index) =>
-                <HeroImage image={image} key={index}/>
+                <HeroImageMemo image={image} key={index}/>
             )
         }
         <div className={classes.slider}>
-            <HeroImage image={IMAGES[currentImage]} id="slider_image"/>
+            <HeroImageMemo image={IMAGES[currentImage]} id="slider_image"/>
         </div>
         </div>
     );

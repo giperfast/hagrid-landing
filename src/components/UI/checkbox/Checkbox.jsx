@@ -11,4 +11,4 @@ function Checkbox({label, ...attrs}) {
     );
 }
 
-export default Checkbox;
+export default React.memo(Checkbox);

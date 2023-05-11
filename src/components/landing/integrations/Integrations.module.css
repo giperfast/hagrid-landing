@@ -39,13 +39,13 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 24px;
 }
 
 .buttons > *
 {
-    width: 4rem;
-    height: 4rem;
+    width: 64px;
+    height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;

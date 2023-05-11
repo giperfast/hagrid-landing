@@ -5,6 +5,18 @@ body
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
+.App
+{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-body
+{
+    flex-grow: 1;
+}
+
 .explain
 {
     color: rgba(63, 63, 70, 1);
@@ -18,4 +30,9 @@ img
     height: auto;
     max-width: 100%;
     display: block;
+}
+
+.page_container
+{
+    flex: 1 1;
 }

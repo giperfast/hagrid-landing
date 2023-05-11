@@ -5,6 +5,7 @@ import classNames from "classnames";
 import Checkbox from '../../UI/checkbox/Checkbox.jsx';
 import Button from '../../UI/button/Button.jsx';
 import Preloader from '../../UI/preloader/Preloader.jsx';
+import LoginOverlay from '../../landing/login-overlay/LoginOverlay.jsx';
 
 const QUESTION_COUNT = 16
 
@@ -95,11 +96,15 @@ function Card({question, answer, username, avatar}) {
     )
 }
 
+const CardMemo = React.memo(Card)
+
 function Questions() {
     const [page, setPage] = useState(1)
     const [questions, setQuestions] = useState([])
     const [showButton, setShowButton] = useState(true)
     const [showPreloader, setShowPreloader] = useState(false)
+    const [showLoginOverlay, setShowLoginOverlay] = useState(false)
+    const input = React.createRef();
 
 
     const load_questions = async () => {
@@ -122,6 +127,14 @@ function Questions() {
         load_questions();
     }, [page]);
     
+
+    const post_question = async () => {
+        if (input.current.innerText)
+        {
+            setShowLoginOverlay(true)
+        }
+    }
+
     return (
         <div className={classes.container}>
             <a href="#" className={classes.watermark}>Powered by <span className={classes.bold}>hagrid</span></a>
@@ -129,20 +142,20 @@ function Questions() {
             <div className={classes.post}>
                 <p className={classes.post_title}>Ask us Anything</p>
                 <div className={classes.input_container}>
-                    <div id="post_text" className={classes.input} contentEditable></div>
+                    <div id="post_text" ref={input} className={classes.input} contentEditable></div>
                 </div>
                 <div className={classes.submit_container}>
                     <Checkbox label="Anonymously"/>
-                    <Button type="rounded" size="medium">Post your question</Button>
+                    <Button type="rounded" size="medium" onClick={() => post_question()}>Post your question</Button>
                 </div>
             </div>
             <div className={classes.title_container}>
                 <p className={classes.sub_title}>All Questions</p>
-                <Button type="rounded" size="small" theme="light">Login</Button>
+                <Button onClick={() => setShowLoginOverlay(true)} type="rounded" size="small" theme="light">Login</Button>
             </div>
             {
                 questions.map((question, index) => {
-                    return <Card question={question.question} answer={question.answer} username={question.username} avatar={question.avatar} key={question.id}/>
+                    return <CardMemo question={question.question} answer={question.answer} username={question.username} avatar={question.avatar} key={question.id}/>
                 })
             }
             <div className={classes.bottom_container}>
@@ -153,6 +166,8 @@ function Questions() {
                 showPreloader ? <Preloader/> : ''
             } 
             </div>
+            <LoginOverlay active={showLoginOverlay} setActive={setShowLoginOverlay}/>
+             
         </div>
     );
 }
