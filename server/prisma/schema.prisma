@@ -11,30 +11,30 @@ datasource db {
 }
 
 model User {
-  id          Int      @id @default(autoincrement())
-  questions   Question[]
-  profile     Profile?
+  id            Int         @id @default(autoincrement())
+  questions     Question[]
+  profile       Profile?
 }
 
 model Profile {
-  id     Int    @id @default(autoincrement())
-  name   String?
-  avatar String?
-  user   User   @relation(fields: [userId], references: [id])
-  userId Int    @unique
+  id            Int         @id @default(autoincrement())
+  name          String?
+  avatar        String?
+  user          User        @relation(fields: [userId], references: [id])
+  userId        Int         @unique
 }
 
 model Question {
-  id      Int @id @default(autoincrement())
-  text    String
-  user    User   @relation(fields: [userId], references: [id])
-  userId  Int @unique
-  answer  Answer?
+  id            Int         @id @default(autoincrement())
+  text          String
+  user          User        relation(fields: [userId], references: [id])
+  userId        Int         @unique
+  answer        Answer?
 }
 
 model Answer {
-  id          Int @id @default(autoincrement())
-  text        String
-  question    Question   @relation(fields: [questionId], references: [id])
-  questionId  Int @unique
+  id            Int         @id @default(autoincrement())
+  text          String
+  question      question    @relation(fields: [questionId], references: [id])
+  questionId    Int         @unique
 }

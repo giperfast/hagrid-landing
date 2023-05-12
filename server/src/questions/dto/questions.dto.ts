@@ -1,10 +1,13 @@
-import { IsNumber  } from 'class-validator'
+import { IsInt } from 'class-validator'
+import { Type } from 'class-transformer';
 
 export class GetDto
 {
-    @IsNumber ()
+    @Type(() => Number)
+    @IsInt()
     page: number
 
-    @IsNumber ()
+    @Type(() => Number)
+    @IsInt()
     limit: number
 }

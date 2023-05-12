@@ -5,68 +5,26 @@ import { DatabaseService } from '../database/database.service';
 export class QuestionsService {
   constructor(private readonly databaseService: DatabaseService) {}
 
-  getAll() {
-    return this.databaseService.user.findMany({
-      include: {
-        questions: {
-          include: {
-            answer: true,
-          },
-        },
-        profile: true,
-        
-      },
-    });
-  }
-
-  get(page: number, limit: number) {
-    return this.databaseService.user.findMany({
-      skip: page,
-      take: limit,
+  async get(page: number, limit: number): Promise<object> {
+    const total_records_count = await this.databaseService.question.count()
+    const records = await this.databaseService.question.findMany({
+      skip: Number((page - 1) * limit),
+      take: Number(limit),
 
       include: {
-        questions: {
+        answer: true,
+        user: {
           include: {
-            answer: true,
+            profile: true,
           },
-        },
-        profile: true,
-      },
+        }
+      }
     });
+
+    return {
+      total_records_count: total_records_count,
+      records
+    }
   }
-
-  create() {
-  }
-
-  /*delete() {
-    return this.databaseService.user.delete({
-      where: { id: 2 }
-    });
-  }*/
-
-  /*create() {
-    return this.databaseService.user.create({
-      data: {
-        questions: {
-          create: [
-            {
-              text: "Does Google index this content?",
-              answer: {
-                create: {
-                    text: "Absolutely! And more than just index.We actually feed your questions and answers to the Google FAQ schema, so that this is now structured information that can feed snippets in Google Search results. This should boost your SEO chops, all without any effort from you.",
-                },
-              }
-            },
-          ],
-        },
-        profile: {
-          create: {
-              name: "Anonymous",
-              avatar: 'https://hgrd-public.s3.amazonaws.com/public/avatars/anonymous-avatar-15.svg'
-          },
-        },
-      },
-    })
-  }*/
 }
 
