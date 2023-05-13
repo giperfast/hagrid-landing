@@ -5,17 +5,19 @@ import Preloader from '../../UI/preloader/Preloader.jsx';
 
 async function getTestimonials() {
     let resp
-    await axios.get("https://api.airtable.com/v0/appwBMPpVDCDEHMr6/hagrid", {
-        headers: {
-          Authorization: "Bearer key04kzdBL9zJQCwp",
-        },
+    await axios.get(`${process.env.REACT_APP_API_URL}/testimonials`, { 
+        params: {
+            'page': 1,
+            'limit': 9
+        }
     }).then((response) => {
-        resp = response
+        resp = response.data
     })
+    console.log(resp)
     return resp
 }
 
-function Card({text, avatar, name, designation, link}) {
+function Card({text, avatar, name, designation}) {
     return (
         <div className={classes.item}>
             <p className={classes.text}>{text}</p>
@@ -37,8 +39,8 @@ function Testimonials() {
         let data = []
         const response = await getTestimonials()
 
-        response.data.records.map((record) => {
-            const column = record.fields['Column']
+        response.records.map((record) => {
+            const column = record.column
             const index = column-1
 
             if (column > data.length) {
@@ -50,11 +52,10 @@ function Testimonials() {
 
             data[index].push({
                 'id': record.id,
-                'quote': record.fields['Quote'],
-                'avatar': record.fields['Attachments'][0].url,
-                'name': record.fields['Name'],
-                'designation': record.fields['Designation'],
-                'link': record.fields['Link'],
+                'text': record.text,
+                'avatar': record.user.profile.avatar,
+                'name': record.user.profile.name,
+                'designation': record.user.profile.designation,
             })
 
             return true
@@ -82,7 +83,7 @@ function Testimonials() {
                         column.map((testimonial, index) => {
                             return (
                                 <li key={testimonial.id}>
-                                    <Card text={testimonial.quote} avatar={testimonial.avatar} name={testimonial.name} designation={testimonial.designation} link={testimonial.link}/>
+                                    <Card text={testimonial.text} avatar={testimonial.avatar} name={testimonial.name} designation={testimonial.designation}/>
                                 </li>
                             )
                         })
