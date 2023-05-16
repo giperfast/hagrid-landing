@@ -2,20 +2,16 @@ import { Prisma } from '@prisma/client'
 import { DatabaseService } from './database.service';
 import { AvatarService } from '../avatar/avatar.service';
 
-const avatarService = new AvatarService(new DatabaseService());
+const databaseService: DatabaseService = new DatabaseService();
+const avatarService: AvatarService = new AvatarService(databaseService);
 
 export const DatabaseExtended = Prisma.defineExtension((client) => {
-
-  const test = (async (userId) => {
-    return userId;
-  })
-
   return client.$extends({
     result: {
       profile: {
         avatar: {
           needs: {},
-          compute(profile) {
+          compute(profile): string {
             return avatarService.get(profile['userId'], profile['avatar'])
           },
         },

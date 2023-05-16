@@ -1,8 +1,7 @@
 import { IsInt, Min } from 'class-validator'
 import { Type } from 'class-transformer';
 
-export class GetDto
-{
+export class GetDto {
     @Type(() => Number)
     @IsInt()
     @Min(1)
