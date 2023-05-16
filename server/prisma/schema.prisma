@@ -3,6 +3,7 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["clientExtensions"]
 }
 
 datasource db {
@@ -20,7 +21,7 @@ model User {
 model Profile {
   id            Int           @id @default(autoincrement())
   name          String?
-  avatar        String?
+  avatar        Int?          
   designation   String?
   user          User          @relation(fields: [userId], references: [id])
   userId        Int           @unique

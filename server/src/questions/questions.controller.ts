@@ -4,7 +4,8 @@ import { GetDto } from './dto/questions.dto';
 
 @Controller('questions')
 export class QuestionsController {
-  constructor(private readonly questionsService: QuestionsService) {}
+  constructor(
+    private readonly questionsService: QuestionsService) {}
 
   @Get()
   @UsePipes(new ValidationPipe())

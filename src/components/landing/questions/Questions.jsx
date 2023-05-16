@@ -27,7 +27,7 @@ function Card({question, answer, username, avatar}) {
             <div className={classes.question}>
                 <div className={classes.title}>{question}</div>
                 <div className={classes.user}>
-                    <img className={classes.avatar} src={avatar} alt="" loading="lazy"/>
+                    <img src={process.env.REACT_APP_API_URL + avatar} className={classes.avatar} alt="" loading="lazy"/>
                     <p className={classes.username}>{username}</p>
                 </div>
             </div>

@@ -22,7 +22,7 @@ function Card({text, avatar, name, designation}) {
         <div className={classes.item}>
             <p className={classes.text}>{text}</p>
             <div className={classes.author}>
-                <img src={avatar} className={classes.avatar} loading="lazy" alt=""/>
+                <img src={process.env.REACT_APP_API_URL + avatar} className={classes.avatar} loading="lazy" alt=""/>
                 <div className={classes.author_information}>
                     <p className={classes.name}>{name}</p>
                     <p className={classes.designation}>{designation}</p>
