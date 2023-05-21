@@ -4,17 +4,16 @@ import classes from './Testimonials.module.css';
 import Preloader from '../../UI/preloader/Preloader.jsx';
 
 async function getTestimonials() {
-    let resp
+    let resp = '';
     await axios.get(`${process.env.REACT_APP_API_URL}/testimonials`, { 
         params: {
             'page': 1,
             'limit': 9
         }
     }).then((response) => {
-        resp = response.data
+        resp = response.data;
     })
-    console.log(resp)
-    return resp
+    return resp;
 }
 
 function Card({text, avatar, name, designation}) {
@@ -36,17 +35,17 @@ function Testimonials() {
     const [data, setData] = useState([]);
 
     const testimonials = async () => {
-        let data = []
-        const response = await getTestimonials()
+        let data = [];
+        const response = await getTestimonials();
 
         response.records.map((record) => {
-            const column = record.column
-            const index = column-1
+            const column = record.column;
+            const index = column-1;
 
             if (column > data.length) {
-                const count = column-data.length
+                const count = column-data.length;
                 for (let i = 0; i < count; i++) {
-                    data.push([])
+                    data.push([]);
                 }
             }
 
@@ -56,12 +55,12 @@ function Testimonials() {
                 'avatar': record.user.profile.avatar,
                 'name': record.user.profile.name,
                 'designation': record.user.profile.designation,
-            })
+            });
 
-            return true
+            return true;
         })
 
-        setData(data)
+        setData(data);
     }
 
     useEffect(() => {
@@ -70,7 +69,7 @@ function Testimonials() {
 
     if (data.length === 0)
     {
-        return <Preloader/>
+        return <Preloader/>;
     }
 
     return (

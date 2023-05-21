@@ -22,7 +22,6 @@ function Card({icon, title, description}) {
 }
 
 function AdvantageCards() {
-
     const data = [
     {
         'icon': authentication,
@@ -69,7 +68,7 @@ function AdvantageCards() {
         'title': 'Infinite customisation',
         'description': 'Get hagrid to match your webpage brand and theme, down to the last pixel; without writing any code.',
     },
-    ]
+    ];
 
     return (
         <div className={classes.cards}>

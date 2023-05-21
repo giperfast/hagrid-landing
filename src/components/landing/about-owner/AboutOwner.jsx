@@ -23,7 +23,7 @@ function AboutOwner() {
                     <img src={quotes} className={classes.quotes_image} alt="" loading="lazy"/>
                 </div>
                 <div className={classes.button}>
-                    <Button href="#" size="large" theme="light">Schedule a call with me</Button>
+                    <Button href="https://calendly.com/vinodbollini/chat-about-hagrid" size="large" theme="light">Schedule a call with me</Button>
                 </div>
             </div>
         </div>

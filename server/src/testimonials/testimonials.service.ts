@@ -1,17 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from '../database/database.service';
 import { DatabaseExtended } from '../database/database.extends'
-
-type GetReturn = {
-  total_records_count: number
-  records: object
-};
+import { ReturnDto } from "./dto/testimonials.dto";
 
 @Injectable()
 export class TestimonialsService {
   constructor(private readonly databaseService: DatabaseService) {}
 
-  async get(page: number, limit: number): Promise<GetReturn> {
+  async get(page: number, limit: number): Promise<ReturnDto> {
     const databaseExtended = DatabaseExtended(this.databaseService);
     const total_records_count = await databaseExtended.testimonial.count()
     const records = await databaseExtended.testimonial.findMany({

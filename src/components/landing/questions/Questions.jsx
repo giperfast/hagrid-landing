@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import classes from './Questions.module.css';
-import classNames from "classnames";
 import Checkbox from '../../UI/checkbox/Checkbox.jsx';
 import Button from '../../UI/button/Button.jsx';
 import Preloader from '../../UI/preloader/Preloader.jsx';
 import LoginOverlay from '../../landing/login-overlay/LoginOverlay.jsx';
 
 async function getQuestions(page) {
-    const limit = 6
-    let resp
+    const limit = 6;
+    let resp = '';
     await axios.get(`${process.env.REACT_APP_API_URL}/questions`, { 
         params: {
             'page': page,
             'limit': limit
         }
     }).then((response) => {
-        resp = response.data
+        resp = response.data;
     })
-    return resp
+    return resp;
 }
 
 function Card({question, answer, username, avatar}) {
@@ -33,30 +32,30 @@ function Card({question, answer, username, avatar}) {
             </div>
             <div className={classes.answer}>{answer}</div>
         </div>
-    )
+    );
 }
 
-const CardMemo = React.memo(Card)
+const CardMemo = React.memo(Card);
 
 function Questions() {
-    const [page, setPage] = useState(1)
-    const [questions, setQuestions] = useState([])
-    const [showButton, setShowButton] = useState(true)
-    const [showPreloader, setShowPreloader] = useState(false)
-    const [showLoginOverlay, setShowLoginOverlay] = useState(false)
+    const [page, setPage] = useState(1);
+    const [questions, setQuestions] = useState([]);
+    const [showButton, setShowButton] = useState(true);
+    const [showPreloader, setShowPreloader] = useState(false);
+    const [showLoginOverlay, setShowLoginOverlay] = useState(false);
     const input = React.createRef();
 
     const load_questions = async () => {
-        setShowPreloader(true)
-        setShowButton(false)
-        const resp = await getQuestions(page)
-        const array = [...questions, ...resp.records]
+        setShowPreloader(true);
+        setShowButton(false);
+        const resp = await getQuestions(page);
+        const array = [...questions, ...resp.records];
 
         if (array.length !== resp.total_records_count)
         {
-            setShowButton(true)
+            setShowButton(true);
         }
-        setShowPreloader(false)
+        setShowPreloader(false);
         setQuestions(array);
     }
 
@@ -67,14 +66,13 @@ function Questions() {
     const post_question = async () => {
         if (input.current.innerText)
         {
-            setShowLoginOverlay(true)
+            setShowLoginOverlay(true);
         }
     }
     
     return (
         <div className={classes.container}>
-            <a href="#" className={classes.watermark}>Powered by <span className={classes.bold}>hagrid</span></a>
-
+            <a href="/" className={classes.watermark}>Powered by <span className={classes.bold}>hagrid</span></a>
             <div className={classes.post}>
                 <p className={classes.post_title}>Ask us Anything</p>
                 <div className={classes.input_container}>
@@ -103,7 +101,6 @@ function Questions() {
             } 
             </div>
             <LoginOverlay active={showLoginOverlay} setActive={setShowLoginOverlay}/>
-             
         </div>
     );
 }

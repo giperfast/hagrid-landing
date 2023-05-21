@@ -10,7 +10,7 @@ function Card({title, price, description, popular}) {
             MOST POPULAR
             <img src={scribble} alt="" loading="lazy"/>
         </div>
-    : ''
+    : '';
 
     return (
         <div className={classes.card}>
@@ -19,7 +19,7 @@ function Card({title, price, description, popular}) {
             <p className={classes.price}>{price} <span className={classes.duration}>/ month</span></p>
             <p className={classes.description}>{description}</p>
             <div className={classes.button}>
-                <Button href="#" size="medium">Try for Free</Button>
+                <Button href="/login" size="medium">Try for Free</Button>
             </div>
         </div>
     )

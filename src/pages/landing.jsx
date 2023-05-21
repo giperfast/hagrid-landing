@@ -24,7 +24,7 @@ function Landing() {
 				<TextureSection main title="Social Q&A for any website" description="No-code widget, to get visitors talking" color="#fdefef">
 					<Scribble scribble_id="3"/>
 					<Scribble scribble_id="2"/>
-					<Button href="#" size="large">Try for Free</Button>
+					<Button href="/login" size="large">Try for Free</Button>
 					<p className={classes.explain}>14 day trial. No credit card needed.</p>
 					<HeroImages/>
 				</TextureSection>
@@ -48,7 +48,7 @@ function Landing() {
 					<Scribble scribble_id="6"/>
 					<Testimonials/>
 				</TextureSection>
-				<TextureSection title="Unlimited everything always" description="One simple plan. No limits. Pay annually and save." color="#facdcd99">
+				<TextureSection title="Unlimited everything always" description="One simple plan. No limits. Pay annually and save." color="#facdcd99" id="prices">
 					<Scribble scribble_id="1"/>
 					<Prices/>
 				</TextureSection>

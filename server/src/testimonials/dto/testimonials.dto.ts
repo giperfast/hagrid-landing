@@ -13,3 +13,8 @@ export class GetDto
     @Min(1)
     limit: number
 }
+
+export type ReturnDto = {
+    total_records_count: number
+    records: object
+}

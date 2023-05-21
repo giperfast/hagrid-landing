@@ -24,10 +24,9 @@ const scribbles = [
     {'id': 8, 'image': scribble8},
     {'id': 9, 'image': scribble9},
     {'id': 10, 'image': scribble10},
-]
+];
 
 function Scribble({scribble_id}) {
-    
     let id = null
     let image = null
 
