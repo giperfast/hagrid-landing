@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from '../components/UI/header/Header.jsx';
 import TextureSection from '../components/landing/texture-section/TextureSection.jsx';
 import Scribble from '../components/landing/scribble/Scribble.jsx';

@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import classes from './Checkbox.module.css';
 
 function Checkbox({label, ...attrs}) {
@@ -10,4 +10,4 @@ function Checkbox({label, ...attrs}) {
     );
 }
 
-export default React.memo(Checkbox);
+export default memo(Checkbox);

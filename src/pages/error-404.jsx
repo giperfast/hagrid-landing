@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from '../components/UI/header/Header.jsx';
 import Footer from '../components/UI/footer/Footer.jsx';
 import Button from '../components/UI/button/Button.jsx';

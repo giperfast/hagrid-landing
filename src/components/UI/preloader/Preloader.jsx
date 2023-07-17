@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import classes from './Preloader.module.css';
 import classNames from "classnames";
 
@@ -12,4 +12,4 @@ function Preloader() {
     );
 }
 
-export default React.memo(Preloader);
+export default memo(Preloader);

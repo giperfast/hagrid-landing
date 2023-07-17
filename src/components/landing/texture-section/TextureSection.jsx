@@ -1,4 +1,3 @@
-import React from 'react';
 import classNames from "classnames";
 import classes from './TextureSection.module.css';
 import parse from "html-react-parser";

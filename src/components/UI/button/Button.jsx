@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import classNames from "classnames";
 import classes from './Button.module.css';
 
@@ -14,4 +14,4 @@ function Button({children, size = 'medium', type = 'rectangle', theme = 'dark', 
     );
 }
 
-export default React.memo(Button);
+export default memo(Button);

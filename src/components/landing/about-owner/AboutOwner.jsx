@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './AboutOwner.module.css';
 import Button from '../../UI/button/Button.jsx';
 

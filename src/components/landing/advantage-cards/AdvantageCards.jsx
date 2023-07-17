@@ -1,4 +1,3 @@
-import React from 'react';
 import classes from './AdvantageCards.module.css';
 
 import authentication from '../../../assets/images/advantage/authentication.svg';
